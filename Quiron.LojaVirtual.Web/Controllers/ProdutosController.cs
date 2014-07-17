@@ -11,8 +11,9 @@ namespace Quiron.LojaVirtual.Web.Controllers
     {
 
         private ProdutosRepositorio _repositorio;
-        //
-        // GET: /Produtos/
+
+
+        //[Route("produtos/obter")]
         public ActionResult Index()
         {
             _repositorio = new ProdutosRepositorio();

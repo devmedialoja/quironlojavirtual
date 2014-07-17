@@ -6,14 +6,15 @@ using Quiron.LojaVirtual.Web.Models;
 
 namespace Quiron.LojaVirtual.Web.Controllers
 {
+
+    
     public class VitrineController : Controller
     {
         private ProdutosRepositorio _repositorio;
         public int ProdutosPorPagina = 8;
 
 
-
-        public ViewResult ListaProdutos(int pagina = 1)
+       public ViewResult ListaProdutos(int pagina = 1)
         {
             _repositorio = new ProdutosRepositorio();
 
