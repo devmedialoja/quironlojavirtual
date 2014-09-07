@@ -131,6 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CategoriaController.cs" />
     <Compile Include="Controllers\ProdutosController.cs" />
     <Compile Include="Controllers\VitrineController.cs" />
     <Compile Include="Global.asax.cs">
@@ -150,6 +151,7 @@
     <Content Include="Views\Produtos\Index.cshtml" />
     <Content Include="Views\Vitrine\ListaProdutos.cshtml" />
     <Content Include="Views\Shared\ProdutoDetalhes.cshtml" />
+    <Content Include="Views\Categoria\Menu.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
