@@ -30,8 +30,6 @@ namespace Quiron.LojaVirtual.Dominio.Entidades
 
         }
 
-
-
         // Remover item
 
         public void RemevorItem(Produto produto)
