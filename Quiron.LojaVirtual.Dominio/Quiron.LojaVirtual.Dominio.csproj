@@ -47,6 +47,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entidades\Carrinho.cs" />
+    <Compile Include="Entidades\EmailConfiguracoes.cs" />
+    <Compile Include="Entidades\EmailProcessarPedido.cs" />
     <Compile Include="Entidades\Pedido.cs" />
     <Compile Include="Entidades\Produto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
