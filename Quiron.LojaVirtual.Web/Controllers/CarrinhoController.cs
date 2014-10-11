@@ -42,7 +42,6 @@ namespace Quiron.LojaVirtual.Web.Controllers
             return carrinho;
         }
 
-
         public RedirectToRouteResult Remover(int produtoId, string returnUrl)
         {
             
@@ -66,6 +65,13 @@ namespace Quiron.LojaVirtual.Web.Controllers
                 Carrinho = ObterCarrinho(),
                 ReturnUrl = returnurl
             });
+        }
+
+
+        public PartialViewResult Resumo()
+        {
+            Carrinho carrinho = ObterCarrinho();
+            return PartialView(carrinho);
         }
     }
 }
