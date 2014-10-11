@@ -156,6 +156,7 @@
     <Content Include="Views\Categoria\Menu.cshtml" />
     <Content Include="Views\Carrinho\Index.cshtml" />
     <Content Include="Views\Carrinho\Resumo.cshtml" />
+    <Content Include="Views\Carrinho\FecharPedido.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,0 +1,78 @@
+﻿
+@model Quiron.LojaVirtual.Dominio.Entidades.Pedido
+           
+@{
+
+    ViewBag.Title = "Quiron: Fechar o pedido";
+}
+
+
+<h2>Fechar o pedido</h2>
+
+<p>Digite suas informações abaixo</p>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+    
+    <h3>Enviar o para</h3>
+    <div class="form-group">
+        <label>Nome do cliente</label>
+        @Html.TextBoxFor(x => x.NomeCliente, new {@class = "form-control"})
+    </div>
+    
+    <h3>Dados para entrega</h3>
+
+    <div class="form-group">
+        <label>Cep:</label>
+        @Html.TextBoxFor(x => x.Cep, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label>Endereço:</label>
+        @Html.TextBoxFor(x => x.Endereco, new { @class = "form-control" })
+    </div>
+
+
+    <div class="form-group">
+        <label>Complemento:</label>
+        @Html.TextBoxFor(x => x.Complemento, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label>Cidade:</label>
+        @Html.TextBoxFor(x => x.Cidade, new { @class = "form-control" })
+    </div>
+
+
+    <div class="form-group">
+        <label>Bairro:</label>
+        @Html.TextBoxFor(x => x.Bairro, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label>Estado:</label>
+        @Html.TextBoxFor(x => x.Estado, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label>E-mail:</label>
+        @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+    </div>
+    
+    <h3>Opções</h3>
+    
+    <div class="checkbox">
+        <label>
+            @Html.EditorFor(x => x.EmbrulhaPresente)
+            Embrulhar para presente?
+        </label>
+    </div>
+    
+    <div class="text-center">
+        <input class="btn btn-primary" type="submit" value="Fechar o pedido"/>
+    </div>
+
+
+}
+
