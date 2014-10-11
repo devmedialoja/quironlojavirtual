@@ -25,43 +25,22 @@
     
     <h3>Dados para entrega</h3>
 
-    <div class="form-group">
-        <label>Cep:</label>
-        @Html.TextBoxFor(x => x.Cep, new { @class = "form-control" })
-    </div>
+    foreach (var property in ViewData.ModelMetadata.Properties)
+    {
+        if (property.PropertyName != "NomeCliente" && property.PropertyName != "EmbrulhaPresente")
+        {
+            <div class="form-group">
+                
+                <label>
+                    @(property.DisplayName ?? property.PropertyName)
+                </label>
+                
+                @Html.TextBox(property.PropertyName, null, new { @class = "form-control" })
 
-    <div class="form-group">
-        <label>Endereço:</label>
-        @Html.TextBoxFor(x => x.Endereco, new { @class = "form-control" })
-    </div>
+            </div>
+        }
+    }
 
-    <div class="form-group">
-        <label>Complemento:</label>
-        @Html.TextBoxFor(x => x.Complemento, new { @class = "form-control" })
-    </div>
-
-
-    <div class="form-group">
-        <label>Cidade:</label>
-        @Html.TextBoxFor(x => x.Cidade, new { @class = "form-control" })
-    </div>
-
-    <div class="form-group">
-        <label>Bairro:</label>
-        @Html.TextBoxFor(x => x.Bairro, new { @class = "form-control" })
-    </div>
-
-
-    <div class="form-group">
-        <label>Bairro:</label>
-        @Html.TextBoxFor(x => x.Estado, new { @class = "form-control" })
-    </div>
-
-
-    <div class="form-group">
-        <label>E-mail:</label>
-        @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
-    </div>
 
     <h3>Opções</h3>
     <div class="checkbox">
