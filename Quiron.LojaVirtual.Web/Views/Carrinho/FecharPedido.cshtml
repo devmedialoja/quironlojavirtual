@@ -30,17 +30,17 @@
         if (property.PropertyName != "NomeCliente" && property.PropertyName != "EmbrulhaPresente")
         {
             <div class="form-group">
-                
                 <label>
                     @(property.DisplayName ?? property.PropertyName)
                 </label>
-                
+
                 @Html.TextBox(property.PropertyName, null, new { @class = "form-control" })
 
             </div>
         }
     }
 
+    
 
     <h3>Opções</h3>
     <div class="checkbox">
@@ -51,5 +51,36 @@
     </div>
 
     <input class="btn btn-primary" type="submit" value="Fechar o pedido"/>
+
+    <hr/>
+
 }
 
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+<script>
+
+    $('#Cep').change(function(e) {
+
+        e.preventDefault();
+
+        $("#Endereco").val('');
+        $("#Bairro").val('');
+        $("#Cidade").val('');
+        $("#Estado").val('');
+
+        var cep = $('#Cep').val().replace("-", "");
+
+        $.getJSON("http://cep.republicavirtual.com.br/web_cep.php?cep=" + cep + "&formato=json", {}, function(data) {
+
+            if (data.resultado_txt == 'sucesso - cep completo') {
+
+                $("#Endereco").val(data.tipo_logradouro + ' ' + data.logradouro);
+                $("#Bairro").val(data.bairro);
+                $("#Cidade").val(data.cidade);
+                $("#Estado").val(data.uf);
+                
+            }
+        });
+    });
+</script>
