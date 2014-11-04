@@ -17,9 +17,8 @@ namespace Quiron.LojaVirtual.Web.Areas.Administrativo
             context.MapRoute(
                 "Administrativo_default",
                 "Administrativo/{controller}/{action}/{id}",
-                new {controller = "Produtos", action = "Index", id = UrlParameter.Optional },
+                new { controller= "Produto", action = "Index", id = UrlParameter.Optional },
                 new[] { "Quiron.LojaVirtual.Web.Areas.Administrativo.Controllers" }
-
             );
         }
     }

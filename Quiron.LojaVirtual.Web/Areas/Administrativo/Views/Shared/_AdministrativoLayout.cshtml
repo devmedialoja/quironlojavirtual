@@ -1,9 +1,10 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width">
     <title>@ViewBag.Title - Quiron - Administrativo</title>
+    
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
     <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
     <link href="~/Content/ErroEstilo.css" rel="stylesheet" />
@@ -12,13 +13,15 @@
 
 </head>
 <body>
+        <div>
+            
+            @if (TempData["mensagem"] != null)
+            {
+                <div class="alert alert-success">@TempData["mensagem"]</div>
+            }
 
-    <div>
-        @if (TempData["mensagem"] != null)
-        {
-            <div class="alert alert-success">@TempData["mensagem"]</div>
-        }
-        @RenderBody()
-    </div>
+            @RenderBody()
+
+        </div>
 </body>
 </html>
