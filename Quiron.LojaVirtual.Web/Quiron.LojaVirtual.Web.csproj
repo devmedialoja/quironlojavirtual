@@ -123,6 +123,7 @@
     <Content Include="Areas\Administrativo\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Administrativo\Views\Shared\_AdministrativoLayout.cshtml" />
     <Content Include="Areas\Administrativo\Views\Produto\Index.cshtml" />
+    <Content Include="Areas\Administrativo\Views\Produto\Alterar.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
