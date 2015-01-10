@@ -1,14 +1,11 @@
 ﻿@model Quiron.LojaVirtual.Dominio.Entidades.Produto
 
-
 @{
-    ViewBag.Title = "Alterar - " + @Model.Nome;
+    ViewBag.Title = "Alterar";
     Layout = "~/Areas/Administrativo/Views/Shared/_AdministrativoLayout.cshtml";
 }
 
-
-
-<h1>Alterar - @Model.Nome</h1>
+<h2>Alterar - @Model.Nome</h2>
 
 @using (Html.BeginForm())
 {
@@ -16,6 +13,6 @@
     
     <input type="submit" value="Salvar"/>
     
-    @Html.ActionLink("Cancelar e retornar", "Index")
+    @Html.ActionLink("Cancelar e retornar","Index")
 }
 

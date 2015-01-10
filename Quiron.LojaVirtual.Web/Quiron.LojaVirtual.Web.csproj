@@ -106,6 +106,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Administrativo\Views\Produto\Index.cshtml">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -122,7 +125,6 @@
     <Content Include="Areas\Administrativo\Views\web.config" />
     <Content Include="Areas\Administrativo\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Administrativo\Views\Shared\_AdministrativoLayout.cshtml" />
-    <Content Include="Areas\Administrativo\Views\Produto\Index.cshtml" />
     <Content Include="Areas\Administrativo\Views\Produto\Alterar.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />

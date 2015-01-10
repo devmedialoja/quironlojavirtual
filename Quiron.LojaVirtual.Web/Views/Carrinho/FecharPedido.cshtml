@@ -14,8 +14,10 @@
 
 @using (Html.BeginForm())
 {
-    @Html.ValidationSummary()
-
+    
+        @Html.ValidationSummary()
+   
+    
     <h3>Enviar para</h3>
 
     <div class="form-group">
@@ -61,6 +63,8 @@
 <script src="~/Scripts/jquery-1.10.2.min.js"></script>
 
 <script>
+
+    setTimeout(function () { $('.validation-summary-errors').fadeOut(); }, 5000);
 
     $('#Cep').change(function(e) {
 
