@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Web.Mvc;
 using System.Web.UI.WebControls;
 using Quiron.LojaVirtual.Dominio.Entidades;
@@ -71,6 +72,7 @@ namespace Quiron.LojaVirtual.Web.Areas.Administrativo.Controllers
         [HttpPost]
         public JsonResult Excluir(int produtoId)
         {
+           // System.Threading.Thread.Sleep(TimeSpan.FromSeconds(5));
 
             string mensagem = string.Empty;
             _repositorio = new ProdutosRepositorio();

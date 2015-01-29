@@ -7,55 +7,59 @@
 }
 
 
+<div id="divexcluir"></div>
+
+
+
 <div class="panel panel-default">
     <div class="panel-heading">
         <h3>Quiron Loja Virtual - Administrivo - Produtos</h3>
     </div>
     <div class="panel-body">
 
-        @Html.ActionLink("Novo produto", "NovoProduto", "Produto", new {@class = "btn btn-default"})
+        @Html.ActionLink("Novo produto", "NovoProduto", "Produto", new { @class = "btn btn-default" })
 
 
         <table class="table table-striped table-condensed table-bordered">
             <thead>
-            <tr>
-                <th class="text-right">#Id</th>
-                <th>Nome</th>
-                <th class="text-right">Preço</th>
-                <th class="text-center">Excluir</th>
-            </tr>
+                <tr>
+                    <th class="text-right">#Id</th>
+                    <th>Nome</th>
+                    <th class="text-right">Preço</th>
+                    <th class="text-center">Excluir</th>
+                </tr>
 
             </thead>
             <tbody>
-            @foreach (var item in Model)
-            {
-                <tr id="row-@item.ProdutoId">
+                @foreach (var item in Model)
+                {
+                    <tr id="row-@item.ProdutoId">
 
-                    <td class="text-right">
-                        # @item.ProdutoId
-                    </td>
-                    <td>
-                        @Html.ActionLink(item.Nome, "Alterar", new {item.ProdutoId})
-                    </td>
-                    <td class="text-right">
-                        @item.Preco.ToString("c")
-                    </td>
-                    <td class="text-center">
+                        <td class="text-right">
+                            # @item.ProdutoId
+                        </td>
+                        <td>
+                            @Html.ActionLink(item.Nome, "Alterar", new { item.ProdutoId })
+                        </td>
+                        <td class="text-right">
+                            @item.Preco.ToString("c")
+                        </td>
+                        <td class="text-center">
 
-                        @*@using (Html.BeginForm("Excluir", "Produto"))
-                            {
-                                @Html.Hidden("ProdutoId", item.ProdutoId)
-                                <input type="submit" class="btn btn-default btn-xs" value="Excluir"/>
-                            }*@
+                            @*@using (Html.BeginForm("Excluir", "Produto"))
+                                {
+                                    @Html.Hidden("ProdutoId", item.ProdutoId)
+                                    <input type="submit" class="btn btn-default btn-xs" value="Excluir"/>
+                                }*@
 
 
 
-                        <input type="submit" class="btn btn-default btn-xs" id="@item.ProdutoId" name="@item.Nome" value="Excluir"/>
+                            <input type="submit" class="btn btn-default btn-xs" id="@item.ProdutoId" name="@item.Nome" value="Excluir" />
 
-                    </td>
+                        </td>
 
-                </tr>
-            }
+                    </tr>
+                }
 
             </tbody>
         </table>
@@ -66,3 +70,6 @@
 
 
 @Html.Partial("Confirmacao")
+
+
+
