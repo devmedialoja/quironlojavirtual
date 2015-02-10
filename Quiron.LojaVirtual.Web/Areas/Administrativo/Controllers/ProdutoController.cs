@@ -1,16 +1,16 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using System.Web.Mvc;
-using System.Web.UI.WebControls;
 using Quiron.LojaVirtual.Dominio.Entidades;
 using Quiron.LojaVirtual.Dominio.Repositorio;
 
 namespace Quiron.LojaVirtual.Web.Areas.Administrativo.Controllers
 {
+
+    [Authorize] 
     public class ProdutoController : Controller
     {
         private ProdutosRepositorio _repositorio;
-
+         
         public ActionResult Index()
         {
             _repositorio = new ProdutosRepositorio();
@@ -18,7 +18,7 @@ namespace Quiron.LojaVirtual.Web.Areas.Administrativo.Controllers
             return View(produtos);
         }
 
-
+       
         public ViewResult Alterar(int produtoId)
         {
             _repositorio = new ProdutosRepositorio();
@@ -27,7 +27,6 @@ namespace Quiron.LojaVirtual.Web.Areas.Administrativo.Controllers
 
             return View(produto);
         }
-
 
 
         [HttpPost]
