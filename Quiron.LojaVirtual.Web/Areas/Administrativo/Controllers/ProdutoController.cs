@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Web;
 using System.Web.Mvc;
 using Quiron.LojaVirtual.Dominio.Entidades;
 using Quiron.LojaVirtual.Dominio.Repositorio;
@@ -30,7 +31,7 @@ namespace Quiron.LojaVirtual.Web.Areas.Administrativo.Controllers
 
 
         [HttpPost]
-        public ActionResult Alterar(Produto produto)
+        public ActionResult Alterar(Produto produto, HttpPostedFileBase image = null)
         {
             if (ModelState.IsValid)
             {

@@ -48,6 +48,7 @@
                     
                     @using (Html.BeginForm("Login", "Autenticacao", new {ReturnUrl = ViewBag.ReturnUrl}, FormMethod.Post, new {@class = "form-signin"}))
                     {
+                        @Html.ValidationSummary();
                         <fieldset>
                             <div class="row">
                                 <div class="center-block">
