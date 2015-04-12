@@ -3,9 +3,19 @@
 
 
 <div class="well">
-    <h3><strong>@Model.Nome</strong>  </h3>
+
+
+    @if (Model.Imagem != null)
+    {
+        <div class="pull-left" style="margin-right: 10px">
+            <img class="img-thumbnail" width= "120" height="120" src="@Url.Action("ObterImagem","Vitrine", new {Model.ProdutoId})"/>
+        </div>
+    }
+
+    <h3><strong>@Model.Nome</strong>
+    </h3>
     <h3><span class="pull-right label label-primary">@Model.Preco.ToString("c")</span></h3>
-    
+
     @using (Html.BeginForm("Adicionar", "Carrinho"))
     {
         <div class="pull-right">
@@ -14,5 +24,5 @@
             <input type="submit" class="btn btn-success" value="Comprar"/>
         </div>
     }
-    <h3>  <span class="lead">@Model.Descricao</span></h3>
+    <h3> <span class="lead">@Model.Descricao</span></h3>
 </div>
