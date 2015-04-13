@@ -150,6 +150,7 @@
     <Compile Include="Controllers\AutenticacaoController.cs" />
     <Compile Include="Controllers\CarrinhoController.cs" />
     <Compile Include="Controllers\CategoriaController.cs" />
+    <Compile Include="Controllers\ModelBindingController.cs" />
     <Compile Include="Controllers\ProdutosController.cs" />
     <Compile Include="Controllers\VitrineController.cs" />
     <Compile Include="Global.asax.cs">
@@ -176,6 +177,7 @@
     <Content Include="Views\Carrinho\FecharPedido.cshtml" />
     <Content Include="Views\Carrinho\PedidoConcluido.cshtml" />
     <Content Include="Views\Autenticacao\Login.cshtml" />
+    <Content Include="Views\ModelBinding\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
