@@ -32,7 +32,7 @@ namespace Quiron.LojaVirtual.Web.Controllers
 
         private Carrinho ObterCarrinho()
         {
-            Carrinho carrinho = (Carrinho) Session["Carrinho"];
+            Carrinho carrinho = (Carrinho)Session["Carrinho"];
 
             if (carrinho == null)
             {
