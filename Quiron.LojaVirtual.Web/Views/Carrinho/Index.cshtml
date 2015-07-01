@@ -25,21 +25,41 @@
         @foreach (var item in Model.Carrinho.ItensCarrinho)
         {
             <tr>
-                <td class="text-center">@item.Quantidade</td>
+
+
+
+
+                @*<td class="text-center">@item.Quantidade</td>*@
+
+
+
                 <td class="text-left">@item.Produto.Nome</td>
                 <td class="text-right">
                     @item.Produto.Preco.ToString("c")
                 </td>
                 <td class="text-right">
-                    @((item.Quantidade * item.Produto.Preco).ToString("c"))
+                    @((item.Quantidade*item.Produto.Preco).ToString("c"))
                 </td>
+
+
+
+                <td>
+                    @using (Html.BeginForm("Adicionar", "Carrinho"))
+                    {
+                        @Html.Hidden("ProdutoId", item.Produto.ProdutoId)
+                        @Html.HiddenFor(x => x.ReturnUrl)
+                        @Html.TextBox("quantidade", item.Quantidade, new { @class = "quantidade", @type="number", min="1", max="10"})
+                        <input class="btn btn-sm btn-danger" type="submit" value="Atualizar" />
+                    }
+                </td>
+
 
                 <td>
                     @using (Html.BeginForm("Remover", "Carrinho"))
                     {
                         @Html.Hidden("ProdutoId", item.Produto.ProdutoId)
                         @Html.HiddenFor(x => x.ReturnUrl)
-                        <input class="btn btn-sm btn-warning" type="submit" value="Remover" />
+                        <input class="btn btn-sm btn-warning" type="submit" value="Remover"/>
                     }
                 </td>
 
