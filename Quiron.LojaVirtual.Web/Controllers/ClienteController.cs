@@ -11,7 +11,7 @@ namespace Quiron.LojaVirtual.Web.Controllers
         
 
 
-        [Route("Teste")]
+        //[Route("Teste")]
         public ActionResult Index()
         {
             ViewBag.Controller = "Cliente";
