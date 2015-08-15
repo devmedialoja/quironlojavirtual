@@ -11,6 +11,10 @@ html {
       -ms-text-size-adjust: 100%;
 }
 
+a.deco-none {
+    color: #000000;
+    text-decoration: none;
+}
 
 
 .quantidade {

@@ -27,7 +27,7 @@ namespace Quiron.LojaVirtual.Web
 
 
 
-            BundleTable.EnableOptimizations = true;
+            BundleTable.EnableOptimizations = false;
         }
     }
 }

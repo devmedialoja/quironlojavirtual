@@ -1,29 +1,26 @@
 ﻿@model Quiron.LojaVirtual.Dominio.Entidades.Produto
 
-
-
 <div class="well">
-
 
     @if (Model.Imagem != null)
     {
-        <div class="pull-left" style="margin-right: 10px">
-            <img class="img-thumbnail" width= "120" height="120" src="@Url.Action("ObterImagem","Vitrine", new {Model.ProdutoId})"/>
+        <div class="row">
+            <div class="pull-left" style="margin-right: 10px">
+                <img class="img-thumbnail" width="120" height="120" src="@Url.Action("ObterImagem", "Vitrine", new {Model.ProdutoId})" />
+            </div>
+
         </div>
     }
 
-    <h3><strong>@Model.Nome</strong>
-    </h3>
-    <h3><span class="pull-right label label-primary">@Model.Preco.ToString("c")</span></h3>
+    <div class="row">
+        <h4>
+            @Html.ActionLink(@Model.Nome, "Detalhes", "Vitrine", new { id = @Model.ProdutoId, produto = @Model.Nome}, new { @class = "deco-none" })
+            <br />
+            <span class="pull-right label label-primary">
+                @Model.Preco.ToString("c")
+            </span>
+        </h4>
+    </div>
 
-    @using (Html.BeginForm("Adicionar", "Carrinho"))
-    {
-        <div class="pull-right">
-            @Html.HiddenFor(x => x.ProdutoId)
-            @Html.Hidden("quantidade", 1)
-            @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
-            <input type="submit" class="btn btn-success" value="Comprar"/>
-        </div>
-    }
-    <h3> <span class="lead">@Model.Descricao</span></h3>
+ 
 </div>
