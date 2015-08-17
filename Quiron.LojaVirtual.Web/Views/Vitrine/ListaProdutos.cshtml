@@ -1,7 +1,11 @@
-﻿@using Quiron.LojaVirtual.Web.HtmlHelpers
-
+﻿
 @model Quiron.LojaVirtual.Web.Models.ProdutosViewModel
 
+
+
+@{
+    ViewBag.Title = "Produtos";
+}
 
 
 @foreach (var p in Model.Produtos)
@@ -10,6 +14,3 @@
 }
 
 
-@*<div class="btn-group pull-right">
-    @Html.PageLinks(Model.Paginacao, x => Url.Action("ListaProdutos", new { pagina = x, categoria =  Model.CategoriaAtual}))
-</div>*@

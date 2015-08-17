@@ -14,7 +14,7 @@
 
     <div class="row">
         <h4>
-            @Html.ActionLink(@Model.Nome, "Detalhes", "Vitrine", new { id = @Model.ProdutoId, produto = @Model.Nome}, new { @class = "deco-none" })
+            @Html.ActionLink(@Model.Nome, "Detalhes", "Vitrine", new { id = @Model.ProdutoId, produto = @Model.Nome.ToSeoUrl() }, new { @class = "deco-none" })
             <br />
             <span class="pull-right label label-primary">
                 @Model.Preco.ToString("c")

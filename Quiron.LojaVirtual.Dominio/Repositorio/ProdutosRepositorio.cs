@@ -18,6 +18,13 @@ namespace Quiron.LojaVirtual.Dominio.Repositorio
         }
 
 
+        public Produto ObterProduto(int id)
+        {
+            return _context.Produtos.Single(p => p.ProdutoId == id);
+        }
+
+
+
 
 
         //Salvar Produto - Alterar Produto
