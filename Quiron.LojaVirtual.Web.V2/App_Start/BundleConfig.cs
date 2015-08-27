@@ -23,10 +23,10 @@ namespace Quiron.LojaVirtual.Web.V2
              ));
 
             bundles.Add(new ScriptBundle("~/Scripts/startmenu").Include(
-                    "~/Scripts/jquery.smartmenus.min.js"));
+                    "~/Scripts/jquery.smartmenus.js"));
 
-            //bundles.Add(new ScriptBundle("~/Scripts/jsprojetos").Include(
-            //        "~/Scripts/menu.js"));
+            bundles.Add(new ScriptBundle("~/Scripts/jsprojetos").Include(
+                    "~/Scripts/menu.js"));
 
 
 
