@@ -14,6 +14,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{180149E5-98C6-48DD-821A-6F57CC324123}"
 	ProjectSection(SolutionItems) = preProject
 		..\..\..\Dropbox\DevMedia\ScritpCategoria.sql = ..\..\..\Dropbox\DevMedia\ScritpCategoria.sql
+		..\..\..\Dropbox\DevMedia\ScritpMarca.sql = ..\..\..\Dropbox\DevMedia\ScritpMarca.sql
 	EndProjectSection
 EndProject
 Global
