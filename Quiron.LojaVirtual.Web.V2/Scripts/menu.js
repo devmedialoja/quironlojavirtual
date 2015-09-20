@@ -10,6 +10,7 @@ app.iniciarlizar = function () {
     $('#main-menu').smartmenus();
     app.ObterEsportes();
     app.ObterMarcas();
+   
 
 }
 
@@ -38,6 +39,13 @@ app.ObterMarcas = function () {
     });
 
 };
+
+
+
+
+
+
+
 
 
 

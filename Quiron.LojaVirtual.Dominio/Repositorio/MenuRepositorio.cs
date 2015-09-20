@@ -28,6 +28,9 @@ namespace Quiron.LojaVirtual.Dominio.Repositorio
             return _context.MarcaVitrine.OrderBy(m => m.MarcaDescricao);
         }
 
+       
+
+
       
     }
 }

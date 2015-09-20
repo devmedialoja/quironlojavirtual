@@ -10,8 +10,8 @@ namespace Quiron.LojaVirtual.Dominio.Repositorio
         public DbSet<Produto> Produtos { get; set; }
         public DbSet<Administrador> Administradores { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
-
         public DbSet<MarcaVitrine> MarcaVitrine { get; set; }
+      
      
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
