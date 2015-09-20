@@ -10,9 +10,43 @@ app.iniciarlizar = function () {
     $('#main-menu').smartmenus();
     app.ObterEsportes();
     app.ObterMarcas();
-   
+    app.ObterClubesNacionais();
+    app.ObterClubesInternacionais();
+
 
 }
+
+///
+
+//
+
+app.ObterClubesNacionais = function () {
+
+    $.getJSON('menu/obterclubesnacionais', function (data) {
+
+        $(data).each(function () {
+            $("#clubesnacionais").append("<li><a href='/nav/times/" + this.ClubeCodigo + "/" + this.ClubeSeo + "'>" + this.Clube + "</a></li>");
+        });
+
+    });
+
+}
+
+
+
+app.ObterClubesInternacionais = function () {
+
+    $.getJSON('menu/obterclubesinternacionais', function (data) {
+
+        $(data).each(function () {
+           
+            $("#clubesinternacionais").append("<li><a href='/nav/times/" + this.ClubeCodigo + "/" + this.ClubeSeo + "'>" + this.Clube + "</a></li>");
+        });
+
+    });
+
+}
+
 
 
 
