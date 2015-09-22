@@ -61,6 +61,7 @@
     <Compile Include="Entidades\Vitrine\ClubesInternacionais.cs" />
     <Compile Include="Entidades\Vitrine\ClubesNacionais.cs" />
     <Compile Include="Entidades\Vitrine\MarcaVitrine.cs" />
+    <Compile Include="Entidades\Vitrine\ProdutoVitrine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorio\AdministradoresRepositorio.cs" />
     <Compile Include="Repositorio\CategoriaRepositorio.cs" />

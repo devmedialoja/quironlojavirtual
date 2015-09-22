@@ -22,7 +22,7 @@
 <body>
 
 
-    @RenderBody()
+   
 
 
 
@@ -125,12 +125,20 @@
 
     <div class="page-content blocky">
         <div class="container">
-
+            @RenderBody()
         </div>
     </div>
 
 
-    <!-- Recent posts Starts -->
+
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            @Html.Partial("_Marcas")
+        </div>
+    </div>
+
+
+<!-- Recent posts Starts -->
 
     <div class="recent-posts blocky">
         <div class="container">
