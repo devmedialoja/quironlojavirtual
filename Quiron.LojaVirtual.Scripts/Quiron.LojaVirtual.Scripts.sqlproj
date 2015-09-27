@@ -69,5 +69,10 @@
     <Build Include="ScritpLinha.sql" />
     <Build Include="ScritpMarca.sql" />
     <Build Include="ScritpModalidade.sql" />
+    <Build Include="ScriptComProdutoModelo.sql" />
+    <Build Include="ScriptViewProdutoVitrine.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ScritpProduto.rar" />
   </ItemGroup>
 </Project>
