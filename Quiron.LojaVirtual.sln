@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quiron.LojaVirtual.UnitTest
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quiron.LojaVirtual.Web.V2", "Quiron.LojaVirtual.Web.V2\Quiron.LojaVirtual.Web.V2.csproj", "{62E1E69A-069C-448C-8C78-0B63A9C4F487}"
 EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Quiron.LojaVirtual.Scripts", "Quiron.LojaVirtual.Scripts\Quiron.LojaVirtual.Scripts.sqlproj", "{2BC41207-829B-4C20-9815-DBC0322B7AB9}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,12 +33,6 @@ Global
 		{62E1E69A-069C-448C-8C78-0B63A9C4F487}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62E1E69A-069C-448C-8C78-0B63A9C4F487}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62E1E69A-069C-448C-8C78-0B63A9C4F487}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2BC41207-829B-4C20-9815-DBC0322B7AB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2BC41207-829B-4C20-9815-DBC0322B7AB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2BC41207-829B-4C20-9815-DBC0322B7AB9}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{2BC41207-829B-4C20-9815-DBC0322B7AB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2BC41207-829B-4C20-9815-DBC0322B7AB9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2BC41207-829B-4C20-9815-DBC0322B7AB9}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
