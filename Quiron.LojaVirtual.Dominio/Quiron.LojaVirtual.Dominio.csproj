@@ -71,6 +71,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="dbo.Produtos.sql" />
+    <Content Include="ScriptClubesInternacionais.sql" />
+    <Content Include="ScriptClubesNacionais.sql" />
+    <Content Include="ScritpCategoria.sql" />
+    <Content Include="ScritpGenero.sql" />
+    <Content Include="ScritpGrupo.sql" />
+    <Content Include="ScritpGrupoSubGrupo.sql" />
+    <Content Include="ScritpLinha.sql" />
+    <Content Include="ScritpMarca.sql" />
+    <Content Include="ScritpModalidade.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

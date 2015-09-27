@@ -8,6 +8,7 @@ $(function () {
 app.iniciarlizar = function () {
 
     $('#main-menu').smartmenus();
+    $('.sidey .nav').navgoco();
     app.ObterEsportes();
     app.ObterMarcas();
     app.ObterClubesNacionais();

@@ -24,7 +24,8 @@ namespace Quiron.LojaVirtual.Web.V2
              ));
 
             bundles.Add(new ScriptBundle("~/Scripts/startmenu").Include(
-                    "~/Scripts/jquery.smartmenus.js"));
+                "~/js/jquery.navgoco.js",
+                "~/Scripts/jquery.smartmenus.js"));
 
             bundles.Add(new ScriptBundle("~/Scripts/jsprojetos").Include(
                     "~/Scripts/menu.js"));

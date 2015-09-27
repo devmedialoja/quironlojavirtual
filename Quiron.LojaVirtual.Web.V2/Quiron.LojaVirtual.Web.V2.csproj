@@ -201,7 +201,7 @@
     <Content Include="js\jquery.carouFredSel-6.2.1-packed.js" />
     <Content Include="js\jquery.countdown.min.js" />
     <Content Include="js\jquery.js" />
-    <Content Include="js\jquery.navgoco.min.js" />
+    <Content Include="js\jquery.navgoco.js" />
     <Content Include="js\jquery.plugin.min.js" />
     <Content Include="js\jquery.themepunch.revolution.min.js" />
     <Content Include="js\jquery.themepunch.tools.min.js" />
