@@ -55,6 +55,11 @@
     <Compile Include="Entidades\Categoria.cs" />
     <Compile Include="Entidades\EmailConfiguracoes.cs" />
     <Compile Include="Entidades\EmailProcessarPedido.cs" />
+    <Compile Include="Entidades\FaixaEtaria.cs" />
+    <Compile Include="Entidades\Genero.cs" />
+    <Compile Include="Entidades\Grupo.cs" />
+    <Compile Include="Entidades\Marca.cs" />
+    <Compile Include="Entidades\Modalidade.cs" />
     <Compile Include="Entidades\Pedido.cs" />
     <Compile Include="Entidades\Produto.cs" />
     <Compile Include="Entidades\Vitrine\Clubes.cs" />
