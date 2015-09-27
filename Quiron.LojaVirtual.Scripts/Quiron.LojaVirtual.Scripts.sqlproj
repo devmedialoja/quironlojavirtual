@@ -59,18 +59,18 @@
     <Folder Include="Properties" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="ScriptClubesInternacionais.sql" />
-    <Build Include="ScriptClubesNacionais.sql" />
-    <Build Include="ScriptFaixaEtaria.sql" />
-    <Build Include="ScritpCategoria.sql" />
-    <Build Include="ScritpGenero.sql" />
-    <Build Include="ScritpGrupo.sql" />
-    <Build Include="ScritpGrupoSubGrupo.sql" />
-    <Build Include="ScritpLinha.sql" />
-    <Build Include="ScritpMarca.sql" />
-    <Build Include="ScritpModalidade.sql" />
-    <Build Include="ScriptComProdutoModelo.sql" />
-    <Build Include="ScriptViewProdutoVitrine.sql" />
+    <None Include="ScriptClubesInternacionais.sql" />
+    <None Include="ScriptClubesNacionais.sql" />
+    <None Include="ScriptFaixaEtaria.sql" />
+    <None Include="ScritpCategoria.sql" />
+    <None Include="ScritpGenero.sql" />
+    <None Include="ScritpGrupo.sql" />
+    <None Include="ScritpGrupoSubGrupo.sql" />
+    <None Include="ScritpLinha.sql" />
+    <None Include="ScritpMarca.sql" />
+    <None Include="ScritpModalidade.sql" />
+    <None Include="ScriptComProdutoModelo.sql" />
+    <None Include="ScriptViewProdutoVitrine.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ScritpProduto.rar" />
