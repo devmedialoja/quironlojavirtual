@@ -11,7 +11,6 @@ namespace Quiron.LojaVirtual.Dominio.Entidades.Vitrine
     {
         [Key]
         public string ProdutoModeloCor { get; set; }
-
         public string ProdutoDescricao { get; set; }
         public string MarcaDescricao { get; set; }
         public decimal Preco { get; set; }

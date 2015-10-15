@@ -10,10 +10,16 @@ namespace Quiron.LojaVirtual.Web.V2.Controllers
 {
     public class NavController : Controller
     {
-       
+
+        private ProdutoModeloRepositorio _repositorio;
+        private ProdutosViewModel _model;
+
         public ActionResult Index()
         {
-            return View();
+            _repositorio = new ProdutoModeloRepositorio();
+            var produtos = _repositorio.ObterProdutosVitrine();
+            _model = new ProdutosViewModel {Produtos = produtos};
+            return View(_model);
         }
 
         public JsonResult TesteMetedoVitrine()
@@ -31,7 +37,7 @@ namespace Quiron.LojaVirtual.Web.V2.Controllers
         [Route("nav/{id}/{marca}")]
         public ActionResult ObterProdutosPorMarcas(string id)
         {
-            ProdutoModeloRepositorio repositorio = new ProdutoModeloRepositorio();
+           
 
             //repositorio.ObterProdutosVitrine(linha: id, subcategoria: id);
 

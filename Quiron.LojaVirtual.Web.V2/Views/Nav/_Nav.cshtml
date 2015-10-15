@@ -1,0 +1,70 @@
+﻿@using Quiron.LojaVirtual.Web.V2.Helpers
+@model Quiron.LojaVirtual.Web.V2.Models.ProdutosViewModel
+
+
+
+
+<div class="sep-bor"></div>
+
+<div class="shop-items blocky">
+    <div class="container">
+
+        @for (var i = 0; i < Model.Produtos.Count(); i++)
+        {
+            var primeiro = i == 0;
+            var ultimo = i == Model.Produtos.Count - 1;
+            var atual = i + 1;
+            var anterior = i;
+
+
+            if (primeiro || anterior % 4 == 0)
+            {
+                @Html.Raw("<div class=\"row\">")
+            }
+
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="item">
+
+                    <!-- Item image -->
+                    <div class="item-image">
+                        <a href="single-item.html" class="zoom">
+                            <img src="@ImageHelper.CaminhoImagem()/180x180/@Model.Produtos[i].Imagem" alt="" class="img-responsive" />
+                        </a>
+                    </div>
+                    <!-- Item details -->
+
+
+                    <div class="item-details">
+                        <!-- Name -->
+                        <h5><a href="single-item.html">@Model.Produtos[i].ProdutoDescricao</a></h5>
+                        <div class="clearfix"></div>
+                        <!-- Para. Note more than 2 lines. -->
+                        <p>@Model.Produtos[i].MarcaDescricao</p>
+                        <hr>
+                        <!-- Price -->
+                        <div class="item-price pull-left">@Model.Produtos[i].Preco.ToString("C")</div>
+                        <!-- Add to cart -->
+                        <div class="pull-right"><a class="btn btn-danger btn-sm" href="#">Comprar</a></div>
+                        <div class="clearfix"></div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+
+            if (ultimo || atual % 4 == 0)
+            {
+                @Html.Raw("</div>")
+            }
+        }
+
+
+
+
+
+
+    </div>
+
+</div>

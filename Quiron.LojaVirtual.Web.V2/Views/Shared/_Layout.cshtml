@@ -3,12 +3,11 @@
 <head>
     <meta charset="utf-8">
     <!-- Title here -->
-    <title>Title - Quiron</title>
+  
     <!-- Description, Keywords and Author -->
-    <meta name="description" content="Your description">
-    <meta name="keywords" content="Your,Keywords">
-    <meta name="author" content="ResponsiveWebInc">
-
+    <title>@ViewBag.Title</title>
+    <meta name="description" content="@ViewBag.MetaDescription" />
+    <meta name="keywords" content="@ViewBag.MetaKeywords" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Styles -->
@@ -116,7 +115,10 @@
     <!-- Page title -->
     <div class="page-title">
         <div class="container">
-            <h2><i class="fa fa-shopping-cart color"></i> Falou em esportes, pense Quiron <small>Seu esporte é aqui</small></h2>
+            <h2><i class="fa fa-shopping-cart color"></i> Pensou em esportes, pense Quiron <small>Seu esporte está aqui.</small>
+            </h2>
+
+           
             <hr />
         </div>
     </div>
@@ -131,144 +133,8 @@
 
 
 
-    <div class="row">
-        <div class="col-md-12 col-sm-12">
-            @Html.Partial("_Marcas")
-        </div>
-    </div>
+   
 
-
-<!-- Recent posts Starts -->
-
-    <div class="recent-posts blocky">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <!-- Section title -->
-                    <div class="section-title">
-                        <h4><i class="fa fa-credit-card color"></i> &nbsp;Promoções</h4>
-                    </div>
-
-                    <div id="item-carousel" class="carousel slide" data-ride="carousel">
-
-                        <!-- Wrapper for slides -->
-                        <div class="carousel-inner">
-                            <div class="item active">
-                                <div class="row">
-                                    <div class="col-md-3 col-sm-6">
-                                        <!-- single item -->
-                                        <div class="s-item">
-                                            <!-- Image link -->
-                                            <a href="single-item.html">
-                                                <img src="http://images.centauro.com.br/180x180/816584QKA1.jpg" class="img-responsive" alt="" />
-                                            </a>
-                                            <!-- portfolio caption -->
-                                            <div class="s-caption">
-                                                <!-- heading and paragraph -->
-                                                <h4><a href="#">Finibus Bonorum</a></h4>
-                                                <p>Clintock, a Lat Hampden-Sydney College in Virginia.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-6">
-                                        <div class="s-item">
-                                            <a href="single-item.html">
-                                                <img src="http://images.centauro.com.br/180x180/84531204A1.jpg" class="img-responsive" alt="" />
-                                            </a>
-                                            <div class="s-caption">
-                                                <h4><a href="#">Finibus Bonorum</a></h4>
-                                                <p>Clintock, a Lat Hampden-Sydney College in Virginia.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-6">
-                                        <div class="s-item">
-                                            <a href="single-item.html">
-                                                <img src="http://images.centauro.com.br/180x180/83285531A1.jpg" class="img-responsive" alt="" />
-                                            </a>
-                                            <div class="s-caption">
-                                                <h4><a href="#">Finibus Bonorum</a></h4>
-                                                <p>Clintock, a Lat Hampden-Sydney College in Virginia.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-6">
-                                        <div class="s-item">
-                                            <a href="single-item.html">
-                                                <img src="http://images.centauro.com.br/180x180/83312706.jpg" class="img-responsive" alt="" />
-                                            </a>
-                                            <div class="s-caption">
-                                                <h4><a href="#">Finibus Bonorum</a></h4>
-                                                <p>Clintock, a Lat Hampden-Sydney College in Virginia.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="row">
-                                    <div class="col-md-3 col-sm-6">
-                                        <div class="s-item">
-                                            <a href="single-item.html">
-                                                <img src="http://images.centauro.com.br/180x180/82138641.jpg" class="img-responsive" alt="" />
-                                            </a>
-                                            <div class="s-caption">
-                                                <h4><a href="#">Finibus Bonorum</a></h4>
-                                                <p>Clintock, a Lat Hampden-Sydney College in Virginia.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-6">
-                                        <div class="s-item">
-                                            <a href="single-item.html">
-                                                <img src="http://images.centauro.com.br/180x180/85633431A1.jpg" class="img-responsive" alt="" />
-                                            </a>
-                                            <div class="s-caption">
-                                                <h4><a href="#">Finibus Bonorum</a></h4>
-                                                <p>Clintock, a Lat Hampden-Sydney College in Virginia.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-6">
-                                        <div class="s-item">
-                                            <a href="single-item.html">
-                                                <img src="http://images.centauro.com.br/180x180/83216131A1.jpg" class="img-responsive" alt="" />
-                                            </a>
-                                            <div class="s-caption">
-                                                <h4><a href="#">Finibus Bonorum</a></h4>
-                                                <p>Clintock, a Lat Hampden-Sydney College in Virginia.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-6">
-                                        <div class="s-item">
-                                            <a href="single-item.html">
-                                                <img src="http://images.centauro.com.br/180x180/83302731A1.jpg" class="img-responsive" alt="" />
-                                            </a>
-                                            <div class="s-caption">
-                                                <h4><a href="#">Finibus Bonorum</a></h4>
-                                                <p>Clintock, a Lat Hampden-Sydney College in Virginia.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Controls -->
-                        <a class="left c-control" href="#item-carousel" data-slide="prev">
-                            <i class="fa fa-chevron-left"></i>
-                        </a>
-                        <a class="right c-control" href="#item-carousel" data-slide="next">
-                            <i class="fa fa-chevron-right"></i>
-                        </a>
-
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
 
 
 

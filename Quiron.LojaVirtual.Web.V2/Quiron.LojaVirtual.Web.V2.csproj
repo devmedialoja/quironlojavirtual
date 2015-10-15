@@ -126,6 +126,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\ImageHelper.cs" />
+    <Compile Include="HtmlHelpers\InjectPageMetadataAttribute.cs" />
     <Compile Include="HtmlHelpers\StringHelpers.cs" />
     <Compile Include="Models\ProdutosViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -270,6 +272,7 @@
     <Content Include="Views\Shared\_Marcas.cshtml" />
     <Content Include="Views\Nav\Index.cshtml" />
     <Content Include="Views\Nav\ObterProdutosPorMarcas.cshtml" />
+    <Content Include="Views\Nav\_Nav.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
