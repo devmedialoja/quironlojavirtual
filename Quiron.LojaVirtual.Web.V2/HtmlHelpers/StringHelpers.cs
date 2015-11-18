@@ -28,5 +28,17 @@ public static class StringHelpers
     }
 
 
+    public static string UpperCaseFirst(this string title)
+    {
+        // Check for empty string.
+        if (string.IsNullOrEmpty(title))
+        {
+            return string.Empty;
+        }
+        // Return char and concat substring.
+        return char.ToUpper(title[0]) + title.Substring(1);
+    }
+
+
 
 }

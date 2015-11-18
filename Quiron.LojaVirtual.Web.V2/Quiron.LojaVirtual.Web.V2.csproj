@@ -21,6 +21,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -273,6 +274,7 @@
     <Content Include="Views\Nav\Index.cshtml" />
     <Content Include="Views\Nav\ObterProdutosPorMarcas.cshtml" />
     <Content Include="Views\Nav\_Nav.cshtml" />
+    <Content Include="Views\Nav\Navegacao.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
