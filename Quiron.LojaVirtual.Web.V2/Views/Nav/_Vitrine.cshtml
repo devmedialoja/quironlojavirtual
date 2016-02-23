@@ -1,0 +1,61 @@
+﻿
+@model Quiron.LojaVirtual.Web.V2.Models.ProdutosViewModel
+
+
+<div class="shop-items">
+    <div class="container">
+
+
+        <div class="row">
+
+            <div class="col-md-9 col-md-push-3">
+
+                <!-- Breadcrumb -->
+                <ul class="breadcrumb">
+                    <li>
+                        @Html.ActionLink("Vitrine", "Index", "Nav")
+                    </li>
+                    <li class="active">@Model.Titulo</li>
+                </ul>
+
+                <!-- Items List starts -->
+                @Html.Partial("_NavTresColunas", @Model)
+
+
+
+                <!-- Items List ends -->
+
+            </div>
+
+
+            <div class="col-md-3 col-md-pull-9">
+                <div class="sidey">
+                    <ul class="nav">
+                        <li>
+                            <a href="#"><span><span class="caret"></span></span>Tenis</a>
+                            <ul style="display: none;" data-index="0">
+                                @*@Html.Action("TenisCategoria", "Nav")*@
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><span><span class="caret"></span></span>Casual</a>
+                            <ul style="display: none;" data-index="0">
+                                @*@Html.Action("CasualSubGrupo", "Nav")*@
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><span><span class="caret"></span></span>Suplementos</a>
+                            <ul style="display: none;" data-index="0">
+                                @*@Html.Action("Suplementos", "Nav")*@
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+</div>

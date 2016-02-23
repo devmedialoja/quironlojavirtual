@@ -276,6 +276,8 @@
     <Content Include="Views\Nav\ObterProdutosPorMarcas.cshtml" />
     <Content Include="Views\Nav\_Nav.cshtml" />
     <Content Include="Views\Nav\Navegacao.cshtml" />
+    <Content Include="Views\Nav\_Vitrine.cshtml" />
+    <Content Include="Views\Nav\_NavTresColunas.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

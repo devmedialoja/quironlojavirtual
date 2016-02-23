@@ -1,0 +1,85 @@
+﻿
+@using Quiron.LojaVirtual.Web.V2.Helpers
+@model Quiron.LojaVirtual.Web.V2.Models.ProdutosViewModel
+
+
+
+
+<div class="row">
+
+    @for (var i = 0; i < Model.Produtos.Count(); i++)
+    {
+        var primeiro = i == 0;
+        var ultimo = i == Model.Produtos.Count - 1;
+        var atual = i + 1;
+        var anterior = i;
+
+        if (primeiro || anterior % 3 == 0)
+        {
+            @Html.Raw("<div class= \"row\" >")
+        }
+
+
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+
+            <div class="item">
+                <!-- Item image -->
+                <div class="item-image">
+                    <a href="@Url.Action("Detalhes","DetalhesProduto", new {id = @Model.Produtos[i].ProdutoModeloCor, marca = @Model.Produtos[i].MarcaDescricao.ToLower(), produto = @Model.Produtos[i].ProdutoDescricao.ToSeoUrl() })">
+                        <img src="@ImageHelper.CaminhoImagem()/180x180/@Model.Produtos[i].Imagem" alt="@Model.Produtos[i].ProdutoDescricao" class="img-responsive" />
+                    </a>
+                </div>
+                <!-- Item details -->
+                <div class="item-details">
+                    <!-- Name -->
+                    <h5>
+
+                        <a href="@Url.Action("Detalhes","DetalhesProduto", new {id = @Model.Produtos[i].ProdutoModeloCor, marca = @Model.Produtos[i].MarcaDescricao.ToLower(), produto = @Model.Produtos[i].ProdutoDescricao.ToSeoUrl() })" class="zoom">
+                            @Model.Produtos[i].ProdutoDescricao
+                        </a>
+
+
+
+                    </h5>
+                    <div class="clearfix"></div>
+                    <!-- Para. Note more than 2 lines. -->
+                    <p>@Model.Produtos[i].MarcaDescricao</p>
+                    <hr />
+                    <!-- Price -->
+                    <div class="item-price pull-left">@Model.Produtos[i].Preco.ToString("C")</div>
+                    @Model.Produtos[i].ProdutoModeloCor
+                    <div class="item-parcela">Em até 3x de R$ @Model.Produtos[i].Parcela sem juros</div>
+                    <div class="clearfix"></div>
+                    <!-- Add to cart -->
+                    <div class="pull-right"><a href="#" class="btn btn-danger btn-sm">Comprar</a></div>
+                    <div class="clearfix"></div>
+
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+        if (ultimo || atual % 3 == 0)
+        {
+            @Html.Raw("</div>");
+        }
+    }
+
+</div>
+
+
+
+
+
+
+
+
+
+
+

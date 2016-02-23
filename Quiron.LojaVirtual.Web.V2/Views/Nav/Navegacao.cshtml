@@ -1,9 +1,10 @@
-﻿
+﻿@model Quiron.LojaVirtual.Web.V2.Models.ProdutosViewModel
+
 @{
-    ViewBag.Title = "Navegacao";
+
+    ViewBag.Title = @Model.Titulo;
+
 }
 
-<h2>Navegacao</h2>
 
-
-
+@Html.Partial("_Vitrine",@Model)
