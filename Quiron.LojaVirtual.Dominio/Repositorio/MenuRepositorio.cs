@@ -38,6 +38,23 @@ namespace Quiron.LojaVirtual.Dominio.Repositorio
             return _context.ClubesInternacionais.OrderBy(c => c.LinhaDescricao);
         }
 
+
+
+        //Obtenho as categorias pré definidas através da query na tabela categoria
+        public IEnumerable<Categoria> ObterTenisCategoria()
+        {
+            var categorias = new[] { "0005", "0082", "0112", "0010", "0006", "0063" };
+            return _context.Categorias.Where(c => categorias.Contains(c.CategoriaCodigo)).OrderBy(c => c.CategoriaDescricao);
+        }
+
+
+        //Subgrupo tenis
+        public SubGrupo SubGrupoTenis()
+        {
+            return _context.SubGrupos.FirstOrDefault(s => s.SubGrupoCodigo == "0084");
+        }
+
+
        
        
 

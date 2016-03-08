@@ -62,6 +62,7 @@
     <Compile Include="Entidades\Modalidade.cs" />
     <Compile Include="Entidades\Pedido.cs" />
     <Compile Include="Entidades\Produto.cs" />
+    <Compile Include="Entidades\SubGrupo.cs" />
     <Compile Include="Entidades\Vitrine\Clubes.cs" />
     <Compile Include="Entidades\Vitrine\ClubesInternacionais.cs" />
     <Compile Include="Entidades\Vitrine\ClubesNacionais.cs" />

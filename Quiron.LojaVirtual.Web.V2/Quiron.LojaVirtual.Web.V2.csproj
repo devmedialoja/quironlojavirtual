@@ -132,6 +132,7 @@
     <Compile Include="HtmlHelpers\InjectPageMetadataAttribute.cs" />
     <Compile Include="HtmlHelpers\StringHelpers.cs" />
     <Compile Include="Models\ProdutosViewModel.cs" />
+    <Compile Include="Models\SubGrupoCategoriasViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -278,6 +279,7 @@
     <Content Include="Views\Nav\Navegacao.cshtml" />
     <Content Include="Views\Nav\_Vitrine.cshtml" />
     <Content Include="Views\Nav\_NavTresColunas.cshtml" />
+    <Content Include="Views\Nav\_TenisCategoria.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

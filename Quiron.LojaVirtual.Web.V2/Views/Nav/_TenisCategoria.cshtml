@@ -1,0 +1,18 @@
+﻿@using Quiron.LojaVirtual.Web.V2.Models
+
+
+@model SubGrupoCategoriasViewModel
+
+
+@foreach (var item in Model.Categorias)
+{
+    <li>
+        @Html.ActionLink(@item.CategoriaDescricao, "ObterTenisPorCategoria",
+        new
+        {
+        subGrupoCodigo = @Model.SubGrupo.SubGrupoCodigo,
+        categoriaCodigo = @item.CategoriaCodigo,
+        categoriaDescricao = @item.CategoriaDescricao.ToSeoUrl()
+        })
+    </li>
+}
