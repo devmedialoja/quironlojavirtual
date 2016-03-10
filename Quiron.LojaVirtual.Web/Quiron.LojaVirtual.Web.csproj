@@ -172,6 +172,7 @@
     <Compile Include="HtmlHelpers\StringHelpers.cs" />
     <Compile Include="Infraestrutura\CarrinhoModelBinder.cs" />
     <Compile Include="Models\CarrinhoViewModel.cs" />
+    <Compile Include="Models\ModalidadeSubGrupoViewModel.cs" />
     <Compile Include="Models\Paginacao.cs" />
     <Compile Include="Models\ProdutosViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,5 +1,6 @@
 ﻿using System.Web.Mvc;
 using Quiron.LojaVirtual.Dominio.Repositorio;
+using Quiron.LojaVirtual.Web.Models;
 using Quiron.LojaVirtual.Web.V2.Models;
 
 namespace Quiron.LojaVirtual.Web.V2.Controllers
@@ -7,9 +8,9 @@ namespace Quiron.LojaVirtual.Web.V2.Controllers
     public class NavController : Controller
     {
 
-        private ProdutoModeloRepositorio _repositorio;
-        private ProdutosViewModel _model;
-        private MenuRepositorio _menuRepositorio;
+        private  ProdutoModeloRepositorio _repositorio;
+        private  ProdutosViewModel _model;
+        private  MenuRepositorio _menuRepositorio;
 
 
         public ActionResult Index()
@@ -101,6 +102,52 @@ namespace Quiron.LojaVirtual.Web.V2.Controllers
 
 
 
+
+        #region [Casual]
+
+
+        /// <summary>
+        /// Obte modalidades de casual exibido no Menu
+        /// </summary>
+        /// <returns></returns>
+        [ChildActionOnly]
+        [OutputCache(Duration = 3600, VaryByParam = "*")]
+        public ActionResult CasualSubGrupo()
+        {
+            _menuRepositorio = new MenuRepositorio();
+            var casual = _menuRepositorio.ModalidadeCasual();
+            var subGrupo = _menuRepositorio.ObterCasualSubGrupo();
+
+            var model = new ModalidadeSubGrupoViewModel
+            {
+                Modalidade = casual,
+                SubGrupos = subGrupo
+
+            };
+
+            return PartialView("_CasualSubGrupo", model);
+        }
+
+
+      
+        [Route("{modalidadeCodigo}/casual/{subGrupoCodigo}/{subGrupoDescricao}")]
+        public ActionResult ObterModalidadeSubGrupo(string modalidadeCodigo
+            , string subGrupoCodigo, string subGrupoDescricao)
+        {
+            _repositorio = new ProdutoModeloRepositorio();
+            var produtos = _repositorio.ObterProdutosVitrine(modalidade: modalidadeCodigo,
+                subgrupo: subGrupoCodigo);
+
+            _model = new ProdutosViewModel
+            {
+                Produtos = produtos,
+                Titulo = subGrupoDescricao.UpperCaseFirst()
+            };
+
+            return View("Navegacao", _model);
+        }
+
+        #endregion
 
 
     }

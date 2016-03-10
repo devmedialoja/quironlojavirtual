@@ -1,10 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Runtime.Remoting.Messaging;
+using FastMapper;
+using Quiron.LojaVirtual.Dominio.Dto;
 using Quiron.LojaVirtual.Dominio.Entidades;
 using Quiron.LojaVirtual.Dominio.Entidades.Vitrine;
+
 
 namespace Quiron.LojaVirtual.Dominio.Repositorio
 {
@@ -55,10 +56,64 @@ namespace Quiron.LojaVirtual.Dominio.Repositorio
         }
 
 
-       
-       
+
+        #region [Menu Lateral Casual]
+
+        
+        /// <summary>
+        /// Retorno a modalidade Casual
+        /// </summary>
+        /// <returns></returns>
+        public Modalidade ModalidadeCasual()
+        {
+            const string CODIGOMODALIDADE = "0001";
+            return _context.Modalidades
+                .FirstOrDefault(m => m.ModalidadeCodigo == CODIGOMODALIDADE);
+        }
 
 
-      
+        //Quando falamos de coleções temos 3 coleçoes principais
+        //IEnumerable -> Lista somente leitus
+        //IQueryable -> Lista leitura e pesquisa
+        //IList -> Lista leitura, pesquisa, gravacao = DESDE O .NET 2.0
+        //IColletion -> Alternativa mais RECENTE, MODERNA, LEVE AO ILIST = .NET 4.0
+
+        //SubGrupoDto
+        public IEnumerable<SubGrupoDto> ObterCasualSubGrupo()
+        {
+
+            var subGrupos = new[] {"0001", "0102", "0103", "0738", "0084", "0921" };
+
+
+            var query = from s in _context.SubGrupos
+                .Where(s => subGrupos.Contains(s.SubGrupoCodigo))
+                .Select(s => new {s.SubGrupoCodigo, s.SubGrupoDescricao})
+                .Distinct()
+                .OrderBy(s => s.SubGrupoDescricao)
+
+                select new 
+                {
+                  s.SubGrupoCodigo,
+                  s.SubGrupoDescricao
+                };
+
+
+            return query.Project().To<SubGrupoDto>().ToList();
+
+        }
+
+
+       
+
+        #endregion [Menu Lateral Casual]
+
+
+
+
+
+
     }
+
+
+    
 }

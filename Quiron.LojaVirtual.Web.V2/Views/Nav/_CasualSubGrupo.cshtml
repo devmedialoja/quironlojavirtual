@@ -1,0 +1,17 @@
+﻿
+@model Quiron.LojaVirtual.Web.Models.ModalidadeSubGrupoViewModel
+
+
+@foreach (var item in Model.SubGrupos)
+{
+    <li>
+        @Html.ActionLink(@item.SubGrupoDescricao, "ObterModalidadeSubGrupo",
+            new
+            {
+                modalidadeCodigo = @Model.Modalidade.ModalidadeCodigo,
+                subGrupoCodigo = @item.SubGrupoCodigo,
+                subGrupoDescricao = @item.SubGrupoDescricao.ToSeoUrl()
+            })
+
+    </li>
+}
