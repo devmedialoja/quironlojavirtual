@@ -59,7 +59,7 @@ namespace Quiron.LojaVirtual.Dominio.Repositorio
 
         #region [Menu Lateral Casual]
 
-        
+
         /// <summary>
         /// Retorno a modalidade Casual
         /// </summary>
@@ -82,20 +82,20 @@ namespace Quiron.LojaVirtual.Dominio.Repositorio
         public IEnumerable<SubGrupoDto> ObterCasualSubGrupo()
         {
 
-            var subGrupos = new[] {"0001", "0102", "0103", "0738", "0084", "0921" };
+            var subGrupos = new[] { "0001", "0102", "0103", "0738", "0084", "0921" };
 
 
             var query = from s in _context.SubGrupos
                 .Where(s => subGrupos.Contains(s.SubGrupoCodigo))
-                .Select(s => new {s.SubGrupoCodigo, s.SubGrupoDescricao})
+                .Select(s => new { s.SubGrupoCodigo, s.SubGrupoDescricao })
                 .Distinct()
                 .OrderBy(s => s.SubGrupoDescricao)
 
-                select new 
-                {
-                  s.SubGrupoCodigo,
-                  s.SubGrupoDescricao
-                };
+                        select new
+                        {
+                            s.SubGrupoCodigo,
+                            s.SubGrupoDescricao
+                        };
 
 
             return query.Project().To<SubGrupoDto>().ToList();
@@ -103,9 +103,37 @@ namespace Quiron.LojaVirtual.Dominio.Repositorio
         }
 
 
-       
+
 
         #endregion [Menu Lateral Casual]
+
+
+        #region [Suplementos]
+
+        public Categoria Suplemento()
+        {
+            var categoriaSuplementos = "0008";
+
+            return _context.Categorias
+                .FirstOrDefault(s => s.CategoriaCodigo == categoriaSuplementos);
+        }
+
+
+        public IEnumerable<SubGrupo> ObterSuplementos()
+        {
+            var subGrupos = new[]
+            {
+                "0162","0381","0557","0564","0565","1082","1083","1084","1085", "0977"
+            };
+            return _context.SubGrupos
+                .Where(s => subGrupos.Contains(s.SubGrupoCodigo) && s.GrupoCodigo == "0012")
+                .OrderBy(s => s.SubGrupoDescricao);
+        }
+
+
+        
+
+        #endregion
 
 
 
@@ -115,5 +143,5 @@ namespace Quiron.LojaVirtual.Dominio.Repositorio
     }
 
 
-    
+
 }
