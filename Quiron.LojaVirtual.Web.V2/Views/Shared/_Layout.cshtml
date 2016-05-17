@@ -90,7 +90,7 @@
 
                 <div class="col-md-10 col-sm-10">
                     <div class="kart-links">
-                        <a href="Login.html">Seja bem-vindo(a)!  Faça seu login </a>
+                        <a href="Login.html">Seja bem-vindo(a)! Faça seu login </a>
 
                         <a href="login.html">Meu cadastro</a>
                         <a href="register.html">Meus pedidos</a>
@@ -109,6 +109,25 @@
 
             </div>
         </div>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+
+                    @using (Html.BeginRouteForm("BuscaProduto", FormMethod.Get))
+                    {
+                        <div class="input-group">
+                            @Html.TextBox("termo", null, new { @class = "form-control", placeholder = "Clique aqui e faça sua busca" })
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-danger">Ok</button>
+                            </span>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <!-- Logo & Navigation ends -->

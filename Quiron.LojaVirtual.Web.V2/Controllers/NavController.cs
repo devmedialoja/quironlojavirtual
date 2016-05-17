@@ -191,8 +191,27 @@ namespace Quiron.LojaVirtual.Web.V2.Controllers
         }
 
 
+        #endregion
+
+        #region [ Consulta ]
+
+        public ActionResult ConsultarProduto(string termo)
+        {
+            _repositorio = new ProdutoModeloRepositorio();
+            var produtos = _repositorio.ObterProdutosVitrine(busca: termo);
+            _model = new ProdutosViewModel
+            {
+                Produtos = produtos,
+                Titulo = termo.UpperCaseFirst()
+            };
+                return View("Navegacao", _model);
+        }
+
+
+
+        #endregion [ Consulta ]
 
     }
 
-        #endregion
+  
 }
