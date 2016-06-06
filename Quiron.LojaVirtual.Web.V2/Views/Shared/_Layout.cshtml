@@ -1,0 +1,241 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!-- Title here -->
+  
+    <!-- Description, Keywords and Author -->
+    <title>@ViewBag.Title</title>
+    <meta name="description" content="@ViewBag.MetaDescription" />
+    <meta name="keywords" content="@ViewBag.MetaKeywords" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Styles -->
+    @Styles.Render("~/css")
+    @Styles.Render("~/Content/startmenu")
+
+    <!-- Favicon -->
+   
+</head>
+
+<body>
+
+
+   
+
+
+
+    <!-- Shopping cart Modal -->
+    <div class="modal fade" id="shoppingcart" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Shopping Cart</h4>
+                </div>
+                <div class="modal-body">
+
+                    <!-- Items table -->
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="single-item.html">HTC One</a></td>
+                                <td>2</td>
+                                <td>$250</td>
+                            </tr>
+                            <tr>
+                                <td><a href="single-item.html">Apple iPhone</a></td>
+                                <td>1</td>
+                                <td>$502</td>
+                            </tr>
+                            <tr>
+                                <td><a href="single-item.html">Galaxy Note</a></td>
+                                <td>4</td>
+                                <td>$1303</td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <th>Total</th>
+                                <th>$2405</th>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Continue Shopping</button>
+                    <button type="button" class="btn btn-info">Checkout</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <!-- Logo & Navigation starts -->
+
+    <div class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-sm-2">
+                    <!-- Logo -->
+                    <div class="logo">
+                        <h1> @Html.ActionLink("Quiron", "Index") </h1>
+                    </div>
+                </div>
+
+                <div class="col-md-10 col-sm-10">
+                    <div class="kart-links">
+                        <a href="Login.html">Seja bem-vindo(a)! Faça seu login </a>
+
+                        <a href="login.html">Meu cadastro</a>
+                        <a href="register.html">Meus pedidos</a>
+                        <a data-toggle="modal" href="#shoppingcart"><i class="fa fa-shopping-cart"></i> 3 itens - R$ 300,00</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12">
+                    @Html.Partial("_Menu")
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+
+                    @using (Html.BeginRouteForm("BuscaProduto", FormMethod.Get))
+                    {
+                        <div class="input-group">
+                            @Html.TextBox("termo", null, new { @class = "form-control", placeholder = "Clique aqui e faça sua busca" })
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-danger">Ok</button>
+                            </span>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Logo & Navigation ends -->
+    <!-- Page title -->
+    <div class="page-title">
+        <div class="container">
+            <h2><i class="fa fa-shopping-cart color"></i> Pensou em esportes, pense Quiron <small>Seu esporte está aqui.</small>
+            </h2>
+
+           
+            <hr />
+        </div>
+    </div>
+    <!-- Page title -->
+    <!-- Page content -->
+
+    <div class="page-content blocky">
+        <div class="container">
+            @RenderBody()
+        </div>
+    </div>
+
+
+
+   
+
+
+
+
+    <!-- Footer starts -->
+    <footer>
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-4 col-sm-4">
+                    <div class="fwidget">
+
+                        <h4>Oslon de<span class="color">'</span> Techno</h4>
+                        <hr />
+                        <p>Duis leo risus, vehicula luctus nunc.  Quiue rhoncus, a sodales enim arcu quis turpis. Duis leo risus, condimentum ut posuere ac, vehicula luctus nunc.  Quisque rhoncus, a sodales enim arcu quis turpis.</p>
+
+                        <div class="social">
+                            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+                            <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                            <a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-4">
+                    <div class="fwidget">
+                        <h4>Categories</h4>
+                        <hr />
+                        <ul>
+                            <li><a href="#">Sed eu leo orci, condimentum gravida metus</a></li>
+                            <li><a href="#">Etiam at nulla ipsum, in rhoncus purus</a></li>
+                            <li><a href="#">Fusce vel magna faucibus felis dapibus facilisis</a></li>
+                            <li><a href="#">Vivamus scelerisque dui in massa</a></li>
+                            <li><a href="#">Pellentesque eget adipiscing dui semper</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-4 col-sm-4">
+                    <div class="fwidget">
+
+                        <h4>Get In Touch</h4>
+                        <hr />
+                        <div class="address">
+                            <p><i class="fa fa-home color contact-icon"></i> #12, Plot No.14, Raj Karmara Street, </p>
+                            <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 5th Stage, Koramangala, Madiwala,</p>
+                            <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Bangalore - 493922, Karananana.</p>
+                            <p><i class="fa fa-phone color contact-icon"></i> +94-948-323-5532</p>
+                            <p><i class="fa fa-envelope color contact-icon"></i> <a href="mailto:something@gmail.com">some.thing@gmail.com</a></p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <hr />
+
+            <div class="copy text-center">
+                Copyright 2013 &copy; - <a href="http://responsivewebinc.com/bootstrap-themes">Bootstrap Themes</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer ends -->
+    <!-- Scroll to top -->
+    <span class="totop"><a href="#"><i class="fa fa-chevron-up"></i></a></span>
+
+
+
+
+
+    <!-- Javascript files -->
+    @Scripts.Render("~/js")
+    @Scripts.Render("~/Scripts/startmenu")
+    @Scripts.Render("~/Scripts/jsprojetos")
+
+
+</body>
+</html>

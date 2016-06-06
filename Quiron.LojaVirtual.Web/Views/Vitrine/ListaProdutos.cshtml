@@ -1,0 +1,16 @@
+﻿
+@model Quiron.LojaVirtual.Web.Models.ProdutosViewModel
+
+
+
+@{
+    ViewBag.Title = "Produtos";
+}
+
+
+@foreach (var p in Model.Produtos)
+{
+    @Html.Partial("ProdutoDetalhes",p)
+}
+
+

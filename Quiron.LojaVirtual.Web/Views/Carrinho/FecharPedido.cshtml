@@ -1,0 +1,92 @@
+﻿@model Quiron.LojaVirtual.Dominio.Entidades.Pedido
+
+
+@{
+    ViewBag.Title = "Quiron: Fechar o pedido";
+}
+
+
+
+
+<h2>Fechar o pedido</h2>
+
+<p>Digite suas informações abaixo</p>
+
+@using (Html.BeginForm())
+{
+    
+        @Html.ValidationSummary()
+   
+    
+    <h3>Enviar para</h3>
+
+    <div class="form-group">
+        <label>Nome do cliente:</label>
+        @Html.TextBoxFor(x => x.NomeCliente, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.NomeCliente)
+       
+    </div>
+    
+    <h3>Dados para entrega</h3>
+
+    foreach (var property in ViewData.ModelMetadata.Properties)
+    {
+        if (property.PropertyName != "NomeCliente" && property.PropertyName != "EmbrulhaPresente")
+        {
+            <div class="form-group">
+                <label>
+                    @(property.DisplayName ?? property.PropertyName)
+                </label>
+
+                @Html.TextBox(property.PropertyName, null, new { @class = "form-control" })
+
+            </div>
+        }
+    }
+
+    
+
+    <h3>Opções</h3>
+    <div class="checkbox">
+        <label>
+           @Html.EditorFor(x => x.EmbrulhaPresente)
+            Embrulhar para presente?
+        </label>
+    </div>
+
+    <input class="btn btn-primary" type="submit" value="Fechar o pedido"/>
+
+    <hr/>
+
+}
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+<script>
+
+    setTimeout(function () { $('.validation-summary-errors').fadeOut(); }, 5000);
+
+    $('#Cep').change(function(e) {
+
+        e.preventDefault();
+
+        $("#Endereco").val('');
+        $("#Bairro").val('');
+        $("#Cidade").val('');
+        $("#Estado").val('');
+
+        var cep = $('#Cep').val().replace("-", "");
+
+        $.getJSON("http://cep.republicavirtual.com.br/web_cep.php?cep=" + cep + "&formato=json", {}, function(data) {
+
+            if (data.resultado_txt == 'sucesso - cep completo') {
+
+                $("#Endereco").val(data.tipo_logradouro + ' ' + data.logradouro);
+                $("#Bairro").val(data.bairro);
+                $("#Cidade").val(data.cidade);
+                $("#Estado").val(data.uf);
+                
+            }
+        });
+    });
+</script>

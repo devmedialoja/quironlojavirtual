@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>FastMapper</id>
+    <version>1.2.0</version>
+    <title>FastMapper</title>
+    <authors>t.kivanc</authors>
+    <owners>t.kivanc</owners>
+    <licenseUrl>https://fmapper.codeplex.com/license</licenseUrl>
+    <projectUrl>https://fmapper.codeplex.com/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Powerful convention-based, customizable and fastest tool for object-object mapping.It is useful for Entity to DTO, DTO to Entity mapping strategies. Benchmark, unit tests, samples and documentation available from https://fmapper.codeplex.com.</description>
+    <summary />
+    <copyright>Copyright 2014</copyright>
+    <tags>Entity Framework Data Transfer Object DTO FastMapper Fast Mapper Mapping DataMap</tags>
+  </metadata>
+</package>

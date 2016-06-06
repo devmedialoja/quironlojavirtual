@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+  Sou o Controller - @ViewBag.Controller
+
+<br />
+
+    Sou a Action = @ViewBag.Action
+
+
+
+
+
+@section Scripts{
+
+<script src="~/Scripts/jQueryFixes.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            alert("Teste");
+
+        });
+    </script>
+
+}

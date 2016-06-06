@@ -1,0 +1,26 @@
+﻿@model Quiron.LojaVirtual.Dominio.Entidades.Produto
+
+<div class="well">
+
+    @if (Model.Imagem != null)
+    {
+        <div class="row">
+            <div class="pull-left" style="margin-right: 10px">
+                <img class="img-thumbnail" width="120" height="120" src="@Url.Action("ObterImagem", "Vitrine", new {Model.ProdutoId})" />
+            </div>
+
+        </div>
+    }
+
+    <div class="row">
+        <h4>
+            @Html.ActionLink(@Model.Nome, "Detalhes", "Vitrine", new { id = @Model.ProdutoId, produto = @Model.Nome.ToSeoUrl() }, new { @class = "deco-none" })
+            <br />
+            <span class="pull-right label label-primary">
+                @Model.Preco.ToString("c")
+            </span>
+        </h4>
+    </div>
+
+ 
+</div>

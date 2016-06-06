@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quiron.LojaVirtual.Dominio", "Quiron.LojaVirtual.Dominio\Quiron.LojaVirtual.Dominio.csproj", "{4E1D0173-2D73-468A-B8F2-CF007FDD3A2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quiron.LojaVirtual.Web", "Quiron.LojaVirtual.Web\Quiron.LojaVirtual.Web.csproj", "{9D5283AA-9F55-41D5-A382-7B4127BF53CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quiron.LojaVirtual.UnitTest", "Quiron.LojaVirtual.UnitTest\Quiron.LojaVirtual.UnitTest.csproj", "{9C196649-CF26-47CD-B551-DD31DF16F2EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quiron.LojaVirtual.Web.V2", "Quiron.LojaVirtual.Web.V2\Quiron.LojaVirtual.Web.V2.csproj", "{62E1E69A-069C-448C-8C78-0B63A9C4F487}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E1D0173-2D73-468A-B8F2-CF007FDD3A2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E1D0173-2D73-468A-B8F2-CF007FDD3A2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E1D0173-2D73-468A-B8F2-CF007FDD3A2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E1D0173-2D73-468A-B8F2-CF007FDD3A2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D5283AA-9F55-41D5-A382-7B4127BF53CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D5283AA-9F55-41D5-A382-7B4127BF53CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D5283AA-9F55-41D5-A382-7B4127BF53CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D5283AA-9F55-41D5-A382-7B4127BF53CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C196649-CF26-47CD-B551-DD31DF16F2EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C196649-CF26-47CD-B551-DD31DF16F2EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C196649-CF26-47CD-B551-DD31DF16F2EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C196649-CF26-47CD-B551-DD31DF16F2EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62E1E69A-069C-448C-8C78-0B63A9C4F487}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62E1E69A-069C-448C-8C78-0B63A9C4F487}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62E1E69A-069C-448C-8C78-0B63A9C4F487}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62E1E69A-069C-448C-8C78-0B63A9C4F487}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
