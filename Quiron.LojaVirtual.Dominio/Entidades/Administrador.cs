@@ -5,8 +5,6 @@ namespace Quiron.LojaVirtual.Dominio.Entidades
 {
     public class Administrador
     {
-
-
         [Key]
         public int Id { get; set; }
 
