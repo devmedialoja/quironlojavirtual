@@ -1,0 +1,225 @@
+﻿@using Quiron.LojaVirtual.Web.V2.Helpers
+@model Quiron.LojaVirtual.Web.V2.Models.DetalhesProdutoViewModel
+
+
+
+@{
+    ViewBag.Title = @Model.Produto.ModeloDescricao;
+}
+
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-md-9 col-md-push-3">
+            <!-- Breadcrumb -->
+            @*@Html.Partial("_BreadCrumb", @Model)*@
+
+
+
+            <div class="single-item">
+                <div class="row">
+                    <div class="col-md-4 col-xs-5">
+
+                        <div class="item-image">
+                            <img id="produtoImagem" src="@ImageHelper.CaminhoImagem()/400x400/@Model.Produto.Imagem"
+                                 alt="@Model.Produto.ProdutoDescricao"
+                                 class="img-responsive"
+                                 data-zoom-image="@ImageHelper.CaminhoImagem()/900x900/@Model.Produto.Imagem" />
+                        </div>
+
+
+                    </div>
+                    <div class="col-md-5 col-xs-7">
+                        <!-- Title -->
+                        <h4>@Model.Produto.ProdutoDescricao</h4>
+                        <h5><strong>Por : @Model.Produto.Preco.ToString("C")</strong></h5>
+                        <p><strong>Ref:</strong> : @Model.Produto.ProdutoModeloCodigo</p>
+                        <p>
+                            <strong>Marca</strong> : @Model.Produto.MarcaDescricao
+                        </p>
+                        <p><strong>Unidade de venda</strong> : @Model.Produto.UnidadeVenda</p>
+                        @*<p><strong>Quantidade em estoque</strong> : @Model.Produto.</p><br>*@
+
+
+                        @using (Html.BeginForm("Adicionar", "Carrinho"))
+                        {
+                            @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+                            @Html.Hidden("quantidade", 1)
+                            @Html.Hidden("produto", Model.Produto.ProdutoModeloCodigo)
+
+                            <div class="form-group">
+                                <!-- Dropdown menu -->
+
+
+                                <p>
+                                    <strong>Cores:</strong>
+                                </p>
+
+                                @Html.DropDownList("Cor", Model.CoresList, new
+                            {
+                                @class = "form-control",
+                                @onchange = "document.location.href='/produto/"
+                                            + @Model.Produto.ProdutoModeloCodigo
+                                            + "/" + @Model.Produto.MarcaDescricao.ToLower().ToSeoUrl()
+                                            + "/" + @Model.Produto.ProdutoDescricao.ToSeoUrl()
+                                            + "/' + this.options[this.selectedIndex].value; "
+                            })
+
+
+
+
+                                <img src='@ImageHelper.CaminhoImagem()/content/images/swatches/@string.Format("{0}.gif", @Model.CoresList.SelectedValue)' width='25' height='25' />
+
+
+                                <p>
+                                    <strong>Tamanho:</strong>
+                                </p>
+
+                                @Html.DropDownList("Tamanho", Model.TamanhoList, new
+                            {
+                                @class = "form-control"
+
+                            })
+
+
+
+                            </div>
+
+                            <div class="input-group">
+                                <span class="input-group-btn">
+                                    <button type="submit" class="btn btn-success btn-lg">
+                                        <span class="fa fa-shopping-cart color"></span> Comprar
+                                    </button>
+                                </span>
+                            </div><!-- /input-group -->
+
+
+
+                        }
+
+
+                        <!-- Quantity and add to cart button -->
+
+
+
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <!-- Description, specs and review -->
+
+            <ul class="nav nav-tabs" id="myTab">
+                <!-- Use uniqe name for "href" in below anchor tags -->
+                <li class="active"><a data-toggle="tab" href="#tab1" aria-expanded="true">Descrição</a></li>
+                <li class=""><a data-toggle="tab" href="#tab2" aria-expanded="false">Especificações</a></li>
+            </ul>
+
+            <!-- Tab Content -->
+            <div class="tab-content" id="myTabContent">
+                <!-- Description -->
+                <div id="tab1" class="tab-pane fade active in">
+                    <h5><strong>@Model.Produto.ProdutoDescricao - @Model.Produto.MarcaDescricao</strong></h5>
+                    <p>
+                        Nulla facilisi. Sed justo dui, scelerisque ut consectetur vel, eleifend id erat. Morbi auctor adipiscing tempor. Phasellus condimentum rutrum aliquet. Quisque eu consectetur erat. Proin rutrum, erat eget posuere semper, <em>arcu mauris posuere tortor</em>, in commodo enim magna id massa. Suspendisse potenti. Aliquam erat volutpat. Maecenas quis tristique turpis. Nulla facilisi. Duis sed velit at <a href="#">magna sollicitudin cursus</a> ac ultrices magna. Aliquam consequat, purus vitae auctor ullamcorper, sem velit convallis quam, a pharetra justo nunc et mauris. Vivamus diam diam, fermentum sed dapibus eget, egestas sed eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                    <h6><strong>Features</strong></h6>
+                    <ul>
+                        <li>Etiam adipiscing posuere justo, nec iaculis justo dictum non</li>
+                        <li>Cras tincidunt mi non arcu hendrerit eleifend</li>
+                        <li>Aenean ullamcorper justo tincidunt justo aliquet et lobortis diam faucibus</li>
+                        <li>Maecenas hendrerit neque id ante dictum mattis</li>
+                        <li>Vivamus non neque lacus, et cursus tortor</li>
+                    </ul>
+                </div>
+
+                <!-- Sepcs -->
+                <div id="tab2" class="tab-pane fade">
+
+                    <h5><strong>Product Specs:</strong></h5>
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <td><strong>Name</strong></td>
+                                <td>Apple iPhone 5G</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Brand</strong></td>
+                                <td>Apple</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Modal</strong></td>
+                                <td>Fifth Generation</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Memory</strong></td>
+                                <td>2GB RAM</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Storage</strong></td>
+                                <td>16GB, 32GB, 64GB</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Camera</strong></td>
+                                <td>Front VGA, Read 8MP</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Processor</strong></td>
+                                <td>Apple 1.25GHz Processor</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Battery</strong></td>
+                                <td>30 Hours Standby</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+        <div class="col-md-3 col-md-pull-9">
+            <div class="sidey">
+                <ul class="nav">
+                    <li>
+                        <a href="#"><span><span class="caret"></span></span>Tenis</a>
+                        <ul style="display: none;" data-index="0">
+                            @Html.Action("TenisCategoria", "Nav")
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><span><span class="caret"></span></span>Casual</a>
+                        <ul style="display: none;" data-index="0">
+                            @Html.Action("CasualSubGrupo", "Nav")
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><span><span class="caret"></span></span>Suplementos</a>
+                        <ul style="display: none;" data-index="0">
+                            @Html.Action("Suplementos", "Nav")
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="sep-bor"></div>
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/scripts/detalhesproduto")
+
+}
+
+
+

@@ -31,7 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AutoMapper">
-      <HintPath>..\packages\AutoMapper.4.2.1\lib\net45\AutoMapper.dll</HintPath>
+      <HintPath>..\packages\AutoMapper.4.1.1\lib\net45\AutoMapper.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
@@ -56,6 +56,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dto\BreadCrumbDto.cs" />
     <Compile Include="Dto\DetalhesProdutoDto.cs" />
     <Compile Include="Dto\SubGrupoDto.cs" />
     <Compile Include="Entidades\Administrador.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="Entidades\Modalidade.cs" />
     <Compile Include="Entidades\Pedido.cs" />
     <Compile Include="Entidades\Produto.cs" />
+    <Compile Include="Entidades\ProdutoModelo.cs" />
     <Compile Include="Entidades\QuironProduto.cs" />
     <Compile Include="Entidades\SubGrupo.cs" />
     <Compile Include="Entidades\Tamanho.cs" />
@@ -92,6 +94,9 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Entidades\ProdutoModelo.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

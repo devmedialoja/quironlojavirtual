@@ -131,30 +131,30 @@ namespace Quiron.LojaVirtual.Dominio.Repositorio
         }
 
 
-        //public BreadCrumbDto ObterBreadCrumb(string produtoModeloCodigo)
-        //{
-        //    var breadCrumb = (from p in _context.ProdutoModelo
-        //                      join g in _context.Generos on p.GeneroCodigo equals g.GeneroCodigo
-        //                      join m in _context.Marcas on p.MarcaCodigo equals m.MarcaCodigo
-        //                      join c in _context.Categorias on p.CategoriaCodigo equals c.CategoriaCodigo
-        //                      join gr in _context.Grupos on p.GrupoCodigo equals gr.GrupoCodigo
-        //                      where p.ProdutoModeloCodigo == produtoModeloCodigo
+        public BreadCrumbDto ObterBreadCrumb(string produtoModeloCodigo)
+        {
+            var breadCrumb = (from p in _context.ProdutoModelo
+                              join g in _context.Generos on p.GeneroCodigo equals g.GeneroCodigo
+                              join m in _context.Marcas on p.MarcaCodigo equals m.MarcaCodigo
+                              join c in _context.Categorias on p.CategoriaCodigo equals c.CategoriaCodigo
+                              join gr in _context.Grupos on p.GrupoCodigo equals gr.GrupoCodigo
+                              where p.ProdutoModeloCodigo == produtoModeloCodigo
 
-        //                      select new
-        //                      {
-        //                          m.MarcaCodigo,
-        //                          m.MarcaDescricao,
-        //                          p.ProdutoDescricao,
-        //                          g.GeneroCodigo,
-        //                          g.GeneroDescricao,
-        //                          c.CategoriaCodigo,
-        //                          c.CategoriaDescricao,
-        //                          gr.GrupoCodigo,
-        //                          gr.GrupoDescricao
+                              select new
+                              {
+                                  m.MarcaCodigo,
+                                  m.MarcaDescricao,
+                                  p.ProdutoDescricao,
+                                  g.GeneroCodigo,
+                                  g.GeneroDescricao,
+                                  c.CategoriaCodigo,
+                                  c.CategoriaDescricao,
+                                  gr.GrupoCodigo,
+                                  gr.GrupoDescricao
 
-        //                      }).FirstOrDefault();
+                              }).FirstOrDefault();
 
-        //    return Mapper.DynamicMap<BreadCrumbDto>(breadCrumb);
-        //}
+            return Mapper.DynamicMap<BreadCrumbDto>(breadCrumb);
+        }
     }
 }

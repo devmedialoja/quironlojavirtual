@@ -41,6 +41,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=4.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AutoMapper.4.1.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
@@ -121,6 +125,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CategoriaController.cs" />
+    <Compile Include="Controllers\DetalhesProdutosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\NavController.cs" />
@@ -132,6 +137,7 @@
     <Compile Include="HtmlHelpers\InjectPageMetadataAttribute.cs" />
     <Compile Include="HtmlHelpers\StringHelpers.cs" />
     <Compile Include="Models\CategoriaSubGruposViewModel.cs" />
+    <Compile Include="Models\DetalhesProdutoViewModel.cs" />
     <Compile Include="Models\ModalidadeSubGrupoViewModel.cs" />
     <Compile Include="Models\ProdutosViewModel.cs" />
     <Compile Include="Models\SubGrupoCategoriasViewModel.cs" />
@@ -207,6 +213,7 @@
     <Content Include="js\html5shiv.js" />
     <Content Include="js\jquery.carouFredSel-6.2.1-packed.js" />
     <Content Include="js\jquery.countdown.min.js" />
+    <Content Include="js\jquery.elevatezoom.js" />
     <Content Include="js\jquery.js" />
     <Content Include="js\jquery.navgoco.js" />
     <Content Include="js\jquery.plugin.min.js" />
@@ -245,6 +252,7 @@
     <Content Include="Content\sm-mint\_mixins.scss" />
     <Content Include="Content\sm-mint\_sm-mint.scss" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\detalhesProduto.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -284,10 +292,12 @@
     <Content Include="Views\Nav\_TenisCategoria.cshtml" />
     <Content Include="Views\Nav\_CasualSubGrupo.cshtml" />
     <Content Include="Views\Nav\_Suplementos.cshtml" />
+    <Content Include="Views\DetalhesProduto\Detalhes.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Categoria\" />
+    <Folder Include="Views\DetalhesProdutos\" />
     <Folder Include="Views\Menu\" />
     <Folder Include="Views\Produto\" />
   </ItemGroup>
